@@ -1,0 +1,14 @@
+#VoteHub config
+defaultService: TestVote
+logToConsole: false
+servers:
+  server1:
+    address: 127.0.0.1
+    port: 8101
+    pubkey: PUBKEY_HERE
+    customService: CustomVote
+  server2:
+    address: 127.0.0.1
+    port: 8102
+    pubkey: PUBKEY_HERE
+    customService: 

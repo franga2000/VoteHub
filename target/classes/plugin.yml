@@ -1,0 +1,15 @@
+name: VoteHub
+main : com.franga2000.votehub.VoteHub
+version: ${project.version}b-${build.number}
+description: Distribute votes to all your servers
+author: franga2000
+website: http://franga2000.com
+prefix: VoteHub
+depend: [Votifier]
+commands:
+    vhreload:
+        description: reload config
+        default: op
+    sendvote:
+        description: send test vote
+        default: op
