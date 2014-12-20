@@ -1,6 +1,6 @@
 name: VoteHub
 main : com.franga2000.votehub.VoteHub
-version: ${project.version}-${build.number}
+version: ${project.version}
 description: Distribute votes to all your servers
 author: franga2000
 website: http://franga2000.com
