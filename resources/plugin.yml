@@ -1,6 +1,6 @@
 name: VoteHub
 main : com.franga2000.votehub.VoteHub
-version: ${project.version}b-${build.number}
+version: ${project.version}-${build.number}
 description: Distribute votes to all your servers
 author: franga2000
 website: http://franga2000.com
@@ -8,8 +8,21 @@ prefix: VoteHub
 depend: [Votifier]
 commands:
     vhreload:
-        description: reload config
-        default: op
+        description: Reload the plugin
+        permission: votehub.reload
     sendvote:
-        description: send test vote
+        description: Send a test vote
+        usage: /sendvote <player> [service=default]
+        permission: votehub.send
+permissions:
+    votehub.*:
+        description: Gives access to all VoteHub commands
+        children:
+            votehub.reload: true
+            votehub.send: true
+    votehub.reload:
+        description: Gives you access to /vhreload
+        default: op
+    votehub.send:
+        description: Gives you access to /sendvote
         default: op

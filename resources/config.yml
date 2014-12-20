@@ -1,5 +1,5 @@
 #VoteHub config
-defaultService: TestVote
+defaultService: VoteHub
 logToConsole: false
 servers:
   server1:

@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.franga2000</groupId>
   <artifactId>VoteHub</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.2</version>
   <name>VoteHub</name>
   <description>Distribute votes to all your servers</description>
 	<repositories>
@@ -22,11 +22,6 @@
             <version>1.8-R0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-	        <groupId>org.spigotmc</groupId>
-	        <artifactId>spigot-api</artifactId>
-	        <version>1.8-R0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
             <groupId>com.vexsoftware</groupId>
             <artifactId>votifier</artifactId>
             <version>1.8</version>
@@ -38,11 +33,10 @@
         <sourceDirectory>src</sourceDirectory>
         <resources>
             <resource>
-                <directory>${project.basedir}/resources</directory>
-                <filtering>false</filtering>
+                <directory>resources</directory>
+                <filtering>true</filtering>
             </resource>
         </resources>
-
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

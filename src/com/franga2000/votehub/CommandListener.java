@@ -19,14 +19,14 @@ public class CommandListener implements CommandExecutor {
 		switch(cmd.getName().toLowerCase()) {
 			case "vhreload":
 				pl.reload();
-				s.sendMessage("§bConfig Reloaded");
+				s.sendMessage(Util.prefix + "§bConfig Reloaded");
 			return true;
 			
 			case "sendvote" :
 				String arg1 = (args.length > 0) ? args[0] : null;
 				String arg2 = (args.length > 1) ? args[1] : "testVote";
 				if (arg1 == null) {
-					s.sendMessage("§bUsage: §e/sendvote <player> [servicename]");
+					s.sendMessage("§bUsage: §e" + pl.getCommand("sendvote").getUsage());
 					return false;
 				}
 				
@@ -38,9 +38,9 @@ public class CommandListener implements CommandExecutor {
 				fakeVote.setAddress("1.2.3.4");
 				fakeVote.setTimeStamp(String.valueOf(date.getTime()));
 				
-				pl.processVote(fakeVote);
-				s.sendMessage("Test vote sent!");
-				pl.getLogger().info("§e" + s.getName() + "§b sent test vote: §e" + fakeVote.toString());
+				Util.processVote(fakeVote);
+				s.sendMessage("§bTest vote sent!");
+				Util.logToConsole("§e" + s.getName() + "§b sent test vote: §e" + fakeVote.toString());
 			return true;
 		}
 		return false;
